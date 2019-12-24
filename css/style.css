@@ -650,5 +650,6 @@ aside li a i{
 
 
 .map{
-    margin: 0 -15px -25px
+    height: 300px;
+    margin: 0 -15px -35px
 }
