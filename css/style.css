@@ -2,7 +2,6 @@
 *{box-sizing: border-box}
 
 a,
-a:focus,
 a:active,
 a:hover,
 a:visited{text-decoration: none;outline: none}
@@ -25,24 +24,23 @@ body{
     position: relative;
 }
 
-.wraper{
+.container{
     width: 300px;
     margin: 0 auto 40px;
     position: relative;
 }
 
 @media(min-width: 470px){
-    .wraper{width: 470px}
+    .container{width: 470px}
 }
 
 @media(min-width: 768px){
-    .wraper{width: 750px}
+    .container{width: 750px}
 }
 
 @media(min-width: 960px){
-    .wraper{width: 860px}
+    .container{width: 860px}
 }
-
 
 
 
@@ -67,18 +65,18 @@ header .myname h1{
     color: #555
 }
 
-header .myname h3{
-    text-transform: uppercase;
-    margin: 0;
-    font-size: .9rem;
-    color: #888
-}
-
 @media(max-width: 470px){
     header .myname h1{
         font-size: 1.5rem;
         line-height: 20px
     }
+}
+
+header .myname h3{
+    text-transform: uppercase;
+    margin: 0;
+    font-size: .9rem;
+    color: #888
 }
 
 header .hide{
@@ -140,7 +138,7 @@ header .social-links > div:hover::before{
 .content{
     width: 100%;
     position: relative;
-    left: -130%;
+    left: -100vw;
     display: flex;
     flex-flow: column;
     box-shadow: 0 0 35px 0 rgba(0, 137, 139, 0.2);
@@ -148,29 +146,29 @@ header .social-links > div:hover::before{
 }
 
 
-aside{
+nav{
     background-color: #E8E8E8;
     transition: all .5s ease-in-out;
     user-select: none;
 }
 
-aside ul{
+nav ul{
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto
 }
 
 @media (min-width: 768px){
-    aside ul{
+    nav ul{
         justify-content: center
     }
 }
 
-aside ul li:not(:first-of-type){
+nav ul li:not(:first-of-type){
     margin-left: 20px
 }
 
-aside ul li a{
+nav ul li a{
     display: block;
     padding: 25px;
     text-decoration: none;
@@ -185,33 +183,33 @@ aside ul li a{
     border-radius: 5px
 }
 
-aside ul li:hover a{
+nav ul li:hover a{
     background-color: #eee
 }
 
-aside ul li:hover a i{transform: translateY(-10px)}
+nav ul li:hover a i{transform: translateY(-10px)}
 
-aside ul li.active a{
+nav ul li.active a{
     color: #009d97;
     background-color: #fff;
     box-shadow: 0 0 10px #ccc
 }
 
-aside ul li.active:not(:first-of-type) a {
+nav ul li.active:not(:first-of-type) a {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom-color: #fff;
 }
 
-aside ul li.active:first-of-type a {
+nav ul li.active:first-of-type a {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-top-color: #fff;
 }
 
-aside ul li.active a i{color: #009d97}
+nav ul li.active a i{color: #009d97}
 
-aside li a i{
+nav li a i{
     display: block;
     width: 40px;
     height: 40px;
@@ -221,15 +219,16 @@ aside li a i{
     transition: all .5s ease-in-out;
 }
 
-.content > div{
+.content > section{
     background-color: #fff;
     position: relative;
     min-width: 100%;
+    display: none
 }
 
 .portfolio,.resume,.contact{color:#444;display: none}
 
-.content > div .overlay{
+.content > section .overlay{
     padding: 20px 15px;
     min-width: 100%;
     min-height: 100%;
@@ -243,7 +242,7 @@ aside li a i{
 
 .profile{
     color: aliceblue;
-    display: none
+    
 }
 
 .content .profile .overlay{
@@ -629,7 +628,6 @@ aside li a i{
     .contact .contact-links{
         flex-flow: row;
     }
-    .contact .contact-links > div{width: 50%}
 }
 
 .contact .contact-links > div{
@@ -646,6 +644,10 @@ aside li a i{
 .contact .contact-links > div:hover{
     background-color: #009d97;
     color: aliceblue
+}
+
+@media(min-width: 768px){
+    .contact .contact-links > div{width: 50%}
 }
 
 

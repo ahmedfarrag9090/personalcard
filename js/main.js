@@ -24,22 +24,22 @@ $(function(){
 
 
 
+    //  Pagination
     $('.side-menu li a').on('click', function(){
 
-        if( $(this).data('target') == '#profile' ){
+        //  Add className 'active' to the clicked list item
+        $(this).parent('li').addClass('active').siblings().removeClass('active');
+
+        //  Show related section & hide others
+        $($(this).data('target')).siblings('section').slideUp(500).delay(900).end()
+            .delay(500).slideDown(500);     
+
+        //  To show Name at top of page
+        if( $(this).data('target') === '#profile' ){
             $('.myname').addClass('hide');
         }else{
             $('.myname').removeClass('hide');
-        }
-
-        if($($(this).data('target')).css('display') == 'none'){
-            
-            $(this).parent('li').addClass('active').siblings().removeClass('active');
-
-            $($(this).data('target')).siblings('div').slideUp(600).end()
-            .delay(600).slideDown(600);
-        }
-        
+        }   
     });
 
 });
