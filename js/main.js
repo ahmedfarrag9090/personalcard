@@ -31,8 +31,8 @@ $(function(){
         $(this).parent('li').addClass('active').siblings().removeClass('active');
 
         //  Show related section & hide others
-        $($(this).data('target')).siblings('section').slideUp(500).delay(900).end()
-            .delay(500).slideDown(500);     
+        $($(this).data('target')).siblings('section').slideUp(500).delay(900)
+        .end().delay(500).slideDown(500);     
 
         //  To show Name at top of page
         if( $(this).data('target') === '#profile' ){
@@ -41,5 +41,40 @@ $(function(){
             $('.myname').removeClass('hide');
         }   
     });
+
+    
+
+    var filterActive;
+
+    function filterCategory(category) {
+        if (filterActive != category) {
+
+            // reset results list
+            $('.filter-cat-results .filter-cat').removeClass('active');
+
+            // elements to be filtered
+            $('.filter-cat-results .filter-cat')
+                .filter('[data-cat="' + category + '"]')
+                .addClass('active');
+
+            // reset active filter
+            filterActive = category;
+            $('.projects-cat button').removeClass('active');
+        }
+    }
+
+    $('.filter-cat').addClass('active');
+
+    $('.projects-cat button').click(function () {
+        if ($(this).hasClass('cat-all')) {
+            $('.filter-cat-results .filter-cat').addClass('active');
+            filterActive = 'cat-all';
+            $('.projects-cat button').removeClass('active');
+        } else {
+            filterCategory($(this).attr('data-cat'));
+        }
+        $(this).addClass('active');
+    });
+
 
 });

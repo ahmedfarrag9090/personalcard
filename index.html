@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Personal card</title>
 </head>
+
 <body>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+
     <div class="container">
 
         <header>
@@ -32,183 +39,426 @@
 
         <main class="content">
 
-                <section id="profile" class="profile">
-                    <div class="overlay">
+            <section id="profile" class="profile">
+                <div class="overlay">
 
-                        <div class="profile-details">
-                            <div class="profile-img">
-                                <img src="images/work-character.png" alt="">
+                    <div class="profile-details">
+                        <div class="profile-img">
+                            <img src="images/work-character.png" alt="">
+                        </div>
+                        <div class="intro">
+                            <h1>folan elfolany</h1>
+                            <h3>front-end developer</h3>
+                            <div class="about">
+                                <p>I like to make cool and <strong>fully responsive</strong> layouts. I'm always
+                                    interested in creative & refreshing ideas. Feel free to take a look around my
+                                    portfolio.
+
+                                </p>
                             </div>
-                            <div class="intro">
-                                <h1>folan elfolany</h1>
-                                <h3>front-end developer</h3>
-                                <div class="about">
-                                    <p>I like to make cool and <strong>fully responsive</strong> layouts. I'm always interested in creative & refreshing ideas. Feel free to take a look around my portfolio.
-        
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="personal">
+                        <ul>
+                            <li><span>Birthday</span><span>March 13, 1992</span></li>
+                            <li><span>Address</span><span>Cairo, Egypt</span></li>
+                            <li><span>Website</span><span>www.folan.com</span></li>
+                            <li><span>Phone</span><span>+123 456 789 111</span></li>
+                            <li><span>Email</span><span><a>folan@gmail.com</a></span></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <nav>
+                <ul class="side-menu">
+                    <li class="active"><a data-target="#profile"><i class="fa fa-user fa-2x"></i><br>profile</a></li>
+                    <li><a data-target="#portfolio"><i class="fa fa-picture-o fa-2x"></i><br>portfolio</a></li>
+                    <li><a data-target="#resume"><i class="fa fa-suitcase fa-2x"></i><br>resume</a></li>
+                    <li><a data-target="#contact"><i class="fa fa-envelope fa-2x"></i><br>contact</a></li>
+                </ul>
+            </nav>
+
+
+            <section id="portfolio" class="portfolio">
+                <div class="overlay">
+                    <ul class="projects-cat">
+                        <li><button class="cat-all active">All</button></li>
+                        <li><button data-cat="WebDevelopment">WebDevelopment</button></li>
+                        <li><button data-cat="WebDesign">WebDesign</button></li>
+                        <li><button data-cat="GraphicDesign">GraphicDesign</button></li>
+                    </ul>
+                    <h3>Some of the projects I'm proud with</h3>
+                    <div class="gallery filter-cat-results">
+                        <div class="project filter-cat" data-cat="WebDevelopment">
+                            <img src="images/1.jpg" alt="one">
+                            <div class="details">
+                                <h4>Some work</h4>
+                                <h6>Some details</h6>
+                            </div>
+                        </div>
+                        <div class="project filter-cat" data-cat="WebDesign">
+                            <img src="images/2.jpg" alt="one">
+                            <div class="details">
+                                <h4>Some work</h4>
+                                <h6>Some details</h6>
+                            </div>
+                        </div>
+                        <div class="project filter-cat" data-cat="WebDevelopment">
+                            <img src="images/3.jpeg" alt="one">
+                            <div class="details">
+                                <h4>Some work</h4>
+                                <h6>Some details</h6>
+                            </div>
+                        </div>
+                        <div class="project filter-cat" data-cat="WebDesign">
+                            <img src="images/4.jpg" alt="one">
+                            <div class="details">
+                                <h4>Some work</h4>
+                                <h6>Some details</h6>
+                            </div>
+                        </div>
+                        <div class="project filter-cat" data-cat="WebDevelopment">
+                            <img src="images/5.jpeg" alt="one">
+                            <div class="details">
+                                <h4>Some work</h4>
+                                <h6>Some details</h6>
+                            </div>
+                        </div>
+                        <div class="project filter-cat" data-cat="GraphicDesign">
+                            <img src="images/6.jpg" alt="one">
+                            <div class="details">
+                                <h4>Some work</h4>
+                                <h6>Some details</h6>
+                            </div>
+                        </div>
+                        <div class="project filter-cat" data-cat="WebDevelopment">
+                            <img src="images/7.jpg" alt="one">
+                            <div class="details">
+                                <h4>Some work</h4>
+                                <h6>Some details</h6>
+                            </div>
+                        </div>
+                        <div class="project filter-cat" data-cat="WebDesign">
+                            <img src="images/8.jpg" alt="one">
+                            <div class="details">
+                                <h4>Some work</h4>
+                                <h6>Some details</h6>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </section>
+
+            <section id="resume" class="resume">
+                <div class="overlay">
+
+                    <div class="resume-left">
+                        <div class="experience">
+                            <h3>Experience</h3>
+                            <div class="exp-details">
+                                <div class="exp-item">
+                                    <h4>Manager</h4>
+                                    <span>Software House</span>
+                                    <span class="date">2018 - Present</span>
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, et vero
+                                        explicabo nulla voluptate labore corporis doloribus dolorum. Voluptate, voluptas
+                                        exercitationem. Ratione officia totam fugit blanditiis ea excepturi labore
+                                        dolorem.
+
                                     </p>
                                 </div>
-                                
-                            </div>
+                                <div class="exp-item">
+                                    <h4>Web Developer</h4>
+                                    <span>Software House</span>
+                                    <span class="date">2015 - 2018</span>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore consequatur,
+                                        a dolorem eius odit laboriosam pariatur ullam expedita, eligendi earum qui
+                                        cumque provident, dicta fugit.
 
-                        </div>
-
-
-                        <div class="personal">
-                            <ul>
-                                <li><span>birthday</span><span>March 13, 1992</span></li>
-                                <li><span>Address:</span><span>cairo, egypt</span></li>
-                                <li><span>nationality:</span><span>egyptian</span></li>
-                                <li><span>Phone:</span><span>+123 456 789 111</span></li>
-                                <li><span>Email:</span><span><a>folan@gmail.com</a></span></li>
-                            </ul>
-                        </div>
-
-                    </div> 
-                </section>
-
-
-                <nav>
-                    <ul class="side-menu">
-                        <li class="active"><a data-target="#profile"><i class="fa fa-user fa-2x"></i><br>profile</a></li>
-                        <li><a data-target="#portfolio"><i class="fa fa-picture-o fa-2x"></i><br>portfolio</a></li>
-                        <li><a data-target="#resume"><i class="fa fa-suitcase fa-2x"></i><br>resume</a></li>
-                        <li><a data-target="#contact"><i class="fa fa-envelope fa-2x"></i><br>contact</a></li>
-                    </ul>
-                </nav>
-
-
-                <section id="portfolio" class="portfolio">
-                    <div class="overlay">
-                        <h2>portfolio</h2>
-                        <div class="gallery">
-
-                            <div class="project1">
-
-                                <div class="back">
-                                    <img src="images/trade.png" alt="trade">
-                                    <div class="overlay-details">
-                                        <span title="live">
-                                            <a href="https://ahmedfarrag9090.github.io/trade/" target="_blank">
-                                                <i class="fa fa-external-link"></i>
-                                            </a>
-                                        </span>
-                                    </div>
+                                    </p>
                                 </div>
-                            </div>
+                                <div class="exp-item">
+                                    <h4>Web Designer</h4>
+                                    <span>Software House</span>
+                                    <span class="date">2013 - 2015</span>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore consequatur,
+                                        a dolorem eius odit laboriosam
+                                        pariatur ullam expedita, eligendi earum qui cumque provident, dicta fugit.
 
-                            <div class="project2">
-
-                                <div class="back">
-                                    <img src="images/brand.png" alt="brand">
-                                    <div class="overlay-details">
-                                        <span title="live">
-                                            <a href="https://ahmedfarrag9090.github.io/brand/" target="_blank">
-                                                <i class="fa fa-external-link"></i>
-                                            </a>
-                                        </span>
-                                    </div>
+                                    </p>
                                 </div>
-                                
-                            </div>
-
-                            <div class="project3">
-
-                                <div class="back">
-                                    <img src="images/petlab.png" alt="petlab">
-                                    <div class="overlay-details">
-                                        <span title="live">
-                                            <a href="https://ahmedfarrag9090.github.io/petform/" target="_blank">
-                                                <i class="fa fa-external-link"></i>
-                                            </a>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                        </div>
-                    </div>
-                </section>
-
-                <section id="resume" class="resume">
-                    <div class="overlay">
-                        <h2>resume</h2>
-                        
-                        <div class="skills">
-                            <h2>skills</h2>
-                            <div class="skills-logo">
-                                <i class="fa fa-cogs fa-5x"></i>
-                            </div>
-                            <div class="skills-group">
-                                <div class="skill">- html / html5</div>
-                                <div class="skill">- css / css3</div>
-                                <div class="skill">- sass / bootstrap</div>
-                                <div class="skill">- javascript / jquery</div>
-                                <div class="skill">- git & github</div>
-                                <div class="skill">- responsive layouts</div>
-                            </div>
-
-                            <div class="skills-group">
-                                <h4><i class="fa fa-gear fa-spin"></i> in progress</h4>
-                                <div class="skill">- es6</div>
-                                <div class="skill">- vuejs</div>
-                                <div class="skill">- ajax</div>
                             </div>
                         </div>
 
                         <div class="education">
-                            <h2>education</h2>
+                            <h3>Education</h3>
                             <div class="edu-details">
                                 <div class="edu-item">
-                                    <h3>Bachelor's Degree in Computer Science</h3>
-                                    <span>Cairo Uni.</span>
-                                    <span>2009-2013</span>
+                                    <h4>Graphic Design</h4>
+                                    <span>Some School</span>
+                                    <span class="date">20013 - 2015</span>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore consequatur,
+                                        a dolorem eius odit laboriosam
+                                        pariatur ullam expedita, eligendi earum qui cumque provident, dicta fugit.
+
+                                    </p>
                                 </div>
-                                
+                                <div class="edu-item">
+                                    <h4>Computer Science</h4>
+                                    <span>Some School</span>
+                                    <span class="date">2009 - 2013</span>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore consequatur,
+                                        a dolorem eius odit laboriosam
+                                        pariatur ullam expedita, eligendi earum qui cumque provident, dicta fugit.
+
+                                    </p>
+                                </div>
+
                             </div>
-                        </div>
-
-                        <div class="experience">
-                            <h2>experience</h2>
-                            <div class="exp-details">
-                                <div class="exp-item">
-                                    <h3>Front-end Developer</h3>
-                                    <span>Software House</span>
-                                    <span>08/2013 - 08/2019</span>
-                                </div>                                
-                            </div>
-                        </div>
-
-                        <div class="my-cv">
-                            <a href="#"> Download my resume </a>
-                        </div>
-                    
-                    </div>
-                </section>
-
-                <section id="contact" class="contact">
-                    <div class="overlay">
-                        <h2>Contact me</h2>
-
-                        <div class="contact-links">
-
-                            <div class="phone">
-                                <i class="fa fa-phone"></i><br>+123 456 789 111
-                            </div>
-
-                            <div class="email">
-                                <i class="fa fa-envelope"></i><br>folan@gmail.com
-                            </div>
-                        </div>
-
-                        <div class="map">
-                            <iframe width="100%" height="100%" src="https://maps.google.com/maps?width=100%&amp;height=300&amp;hl=en&amp;coord=30.048819,31.243666&amp;q=Cairo%2C%20Egypt+(Ahmed%20Farrag)&amp;ie=UTF8&amp;t=&amp;z=11&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-                                <a href="https://www.maps.ie/coordinates.html">latitude longitude finder</a>
-                            </iframe>
                         </div>
                     </div>
-                </section>
+
+
+
+                    <div class="skills">
+                        <div class="skills-logo">
+                            <i class="fa fa-cogs fa-5x"></i>
+                        </div>
+
+                        <h3>Skills</h3>
+                        <h4>Graphics and media skills</h4>
+                        <div class="skills-group">
+                            <div class="skill">
+                                <span>Photoshop</span>
+                                <ul>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                </ul>
+                            </div>
+                            <div class="skill">
+                                <span>Indesign</span>
+                                <ul>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                </ul>
+                            </div>
+                            <div class="skill">
+                                <span>Illustrator</span>
+                                <ul>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                </ul>
+                            </div>
+                            <div class="skill">
+                                <span>Flash</span>
+                                <ul>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                </ul>
+                            </div>
+                            <div class="skill">
+                                <span>Corel Draw</span>
+                                <ul>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                </ul>
+                            </div>
+                            <div class="skill">
+                                <span>Cinema4D</span>
+                                <ul>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h4>Programming skills</h4>
+                        <div class="skills-group">
+                            <div class="skill"><span>Dreamweaver</span>
+                                <ul>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                </ul>
+                            </div>
+                            <div class="skill">
+                                <span>PHP/SQL</span>
+                                <ul>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                </ul>
+                            </div>
+                            <div class="skill">
+                                <span>Javascript</span>
+                                <ul>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                </ul>
+                            </div>
+                            <div class="skill">
+                                <span>Wordpress</span>
+                                <ul>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                </ul>
+                            </div>
+                            <div class="skill">
+                                <span>Drupal</span>
+                                <ul>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h4>Design skills</h4>
+                        <div class="skills-group">
+                            <div class="skill">
+                                <span>Graphic Design</span>
+                                <ul>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                </ul>
+                            </div>
+                            <div class="skill">
+                                <span>Web Design</span>
+                                <ul>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                </ul>
+                            </div>
+                            <div class="skill">
+                                <span>Print Design</span>
+                                <ul>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                    <li class="fa fa-circle-o"></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="my-cv">
+                        <a href="#"> Download my resume </a>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="contact" class="contact">
+                <div class="overlay">
+
+                    <div class="contacts-wrapper">
+                        <div class="contacts">
+                            <h4>Contact info</h4>
+                            <div class="contacts-details">
+                                <span>Street, City, Country</span>
+                                <span>Email: folan@folan.com</span>
+                                <span>Phone: 123-456-789</span>
+                                <span>Website: www.folan.com</span>
+                            </div>
+                        </div>
+                        
+                        <form action="" class="contact-form">
+                            <h4>Let's keeb in touch</h4>
+                            <label for="name">Your Name</label>
+                            <input type="text" name="name">
+                            <label for="email">Your Email</label>
+                            <input type="email" name="email">
+                            <label for="message">Your Message</label>
+                            <textarea name="message" rows="7"></textarea>
+                            <input type="submit" value="Send your message">
+                        </form>
+                    </div>
+
+                    <div class="map">
+                        <iframe width="100%" height="100%"
+                            src="https://maps.google.com/maps?width=100%&amp;height=300&amp;hl=en&amp;coord=30.048819,31.243666&amp;q=Cairo%2C%20Egypt+(Ahmed%20Farrag)&amp;ie=UTF8&amp;t=&amp;z=11&amp;iwloc=B&amp;output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                            <a href="https://www.maps.ie/coordinates.html">latitude longitude finder</a>
+                        </iframe>
+                    </div>
+                </div>
+            </section>
         </main>
 
     </div>
@@ -216,4 +466,5 @@
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
