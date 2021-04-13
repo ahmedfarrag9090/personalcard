@@ -1,2 +1,0 @@
-# personalcard
-CSS &amp; JQ

@@ -34,25 +34,7 @@ body {
     position: relative;
 }
 
-.circle1,
-.circle2 {
-    width: 25vw;
-    height: 25vw;
-    background: linear-gradient(to right bottom, rgba(255, 255, 255, .8), rgba(255, 255, 255, .3));
-    border-radius: 50%;
-    position: fixed;
-}
 
-.circle1 {
-    bottom: 0;
-    left: 0;
-}
-
-.circle2 {
-    top: 0;
-    left: unset;
-    right: 20px;
-}
 
 .container {
     width: 300px;
@@ -83,6 +65,114 @@ body {
         width: 90%;
     }
 }
+
+
+
+
+
+
+
+
+
+.view1,
+.view2 {
+    width: 100px;
+    height: 100px;
+    perspective: 1200px;
+    position: fixed;
+    z-index: -1;
+}
+.view1 {
+    bottom: 50px;
+    left: 20px;
+}
+
+.view2 {
+    top: 120px;
+    right: 20px;
+}
+
+.box1,
+.box2{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: showBox 15s linear infinite forwards;
+}
+
+@keyframes showBox {
+
+    /* 0%{
+        transform:  rotate3d(1, 1, 1, 0deg)
+    } */
+    100% {
+        transform: rotate3d(1, 2, 1, 360deg)
+    }
+}
+
+
+
+
+
+.box1 div,
+.box2 div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(to left bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.9)); */
+    background: linear-gradient(to left bottom, rgba(240, 248, 255, 0.3), rgba(240, 248, 255, 0.9));
+    border-radius: 15px;
+    /* backdrop-filter: blur(2px); */
+}
+
+.box1 span,
+.box2 span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(0, -25px, 0);
+    display: block;
+    width: 3px;
+    height: 50px;
+    filter: blur(2px);
+    background: linear-gradient(to left bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 1));
+}
+
+.glass1 {
+    transform: rotateY(0deg) translateZ(-50px);
+}
+
+.glass2 {
+    transform: rotateY(90deg) translateZ(-50px);
+}
+
+.glass3 {
+    transform: rotateX(-90deg) translateZ(-50px);
+}
+
+.glass4 {
+    transform: rotateY(-90deg) translateZ(-50px);
+}
+
+.glass5 {
+    transform: rotateX(90deg) translateZ(-50px);
+}
+
+.glass6 {
+    transform: rotateY(180deg) translateZ(-50px);
+}
+
+
+
+
+
+
+
 
 
 
@@ -120,7 +210,6 @@ header .myname h3 {
     margin: 0;
     font-size: .9rem;
     color: #426696;
-    opacity: .8;
 }
 
 header .hide {
@@ -147,7 +236,7 @@ header .social-links>div {
 header .social-links>div a {
     display: block;
     padding: 5px;
-    color: #00A2C2;
+    color: #426696;
     border-radius: 10px;
     transition: all .3s ease-in-out;
     position: relative;
@@ -160,7 +249,7 @@ header .social-links>div::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #00A2C2;
+    background: linear-gradient(to right, #86b8e7, #91EAE4);
     border-radius: 10px;
     transition: all .3s ease-in-out;
     transform: scale(0, 0)
@@ -213,18 +302,14 @@ nav {
 
 nav ul {
     display: flex;
-    flex-wrap: nowrap;
+    justify-content: space-between;
     overflow-x: auto
 }
 
-@media (min-width: 768px) {
+@media (min-width: 470px) {
     nav ul {
-        justify-content: center
+        justify-content: center;
     }
-}
-
-nav ul li:not(:first-of-type) {
-    margin-left: 20px
 }
 
 nav li a i {
@@ -233,31 +318,50 @@ nav li a i {
     height: 40px;
     line-height: 40px !important;
     text-align: center;
-    margin-right: 5px;
     transition: all .5s ease-in-out;
     color: #00A2C2;
 }
 
 nav ul li a {
     display: block;
-    padding: 25px;
+    padding: 6px;
     text-decoration: none;
     text-align: center;
-    color: #00A2C2;
-    transition: all .3s ease-in-out;
+    color: rgb(0, 162, 194);
+    transition: all 0.3s ease-in-out 0s;
     text-transform: uppercase;
-    font-size: .8rem;
+    font-size: 0.7rem;
     cursor: pointer;
-    border-radius: 5px
+    border-radius: 5px;
 }
 
-nav ul li:hover a {
-    color: #fff;
-    background: linear-gradient(to right, #86b8e7, #91EAE4);
+@media (min-width: 470px) {
+    nav ul li:not(:first-of-type) {
+        margin-left: 20px
+    }
+    nav ul li a {
+        padding: 10px;
+        font-size: .9rem;
+    }
+    nav ul li:hover a {
+        color: #fff;
+        background: linear-gradient(to right, #86b8e7, #91EAE4);
+    }
+    nav ul li:hover a i{
+        transform: translateY(-8px);
+        color: #fff;
+    }
 }
 
-nav ul li:hover a i {
-    transform: translateY(-10px);
+@media (min-width: 768px) {
+    nav ul li a{
+        padding: 20px;
+        font-size: 1.2rem;
+    }
+}
+
+nav ul li.active a i {
+    transform: translateY(-8px);
     color: #fff;
 }
 
@@ -277,10 +381,6 @@ nav ul li.active:first-of-type a {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-top-color: #fff;
-}
-
-nav ul li.active a i {
-    color: #fff
 }
 
 .content>section {
@@ -396,14 +496,12 @@ nav ul li.active a i {
     margin: 0 0 4px;
     font-size: 2rem;
     text-transform: uppercase;
-    opacity: .8;
 }
 
 .intro h3 {
     text-transform: uppercase;
     margin: 0;
     font-size: 1rem;
-    opacity: .8;
 }
 
 @media(min-width: 768px) {
@@ -415,36 +513,38 @@ nav ul li.active a i {
 .profile .about p {
     margin: 10px 0 0;
     font-size: .9rem;
-    opacity: .8;
 }
 
-.profile .personal {
+
+
+
+.personal {
     width: 100%;
-    position: relative;
 }
 
 @media(min-width: 768px) {
-    .profile .personal {
+    .personal {
         width: 40%;
     }
 
-    .profile .personal::before {
+    .personal ul::before {
         content: '';
         position: absolute;
         left: 15px;
         top: 50%;
         transform: translateY(-50%);
         width: 8px;
-        height: 75%;
+        height: 100%;
         border-radius: 50%;
         border-left: 3px solid rgba(66, 102, 150, 0.3);
         -webkit-filter: drop-shadow(-2px 0 1px rgba(66, 102, 150, 1));
-        filter: drop-shadow(-2px 0 1px rgba(66, 102, 150, 1));
+        filter: drop-shadow(-1px 0 1px rgba(66, 102, 150, 1));
     }
 }
 
 .personal ul {
-    margin: 20px 0 0
+    margin: 20px 0 0;
+    position: relative;
 }
 
 .personal li {
@@ -461,12 +561,10 @@ nav ul li.active a i {
     width: 35%;
     font-weight: 700;
     margin-right: 20px;
-    opacity: .8;
 }
 
 .personal li span:nth-of-type(2) {
     width: 50%;
-    opacity: .8;
 }
 
 .personal li a {
@@ -488,6 +586,13 @@ nav ul li.active a i {
     padding: 20px 0;
     color: #426696;
     font-weight: 400;
+    font-size: 1rem;
+}
+
+@media(min-width: 470px) {
+    .portfolio h3{
+        font-size: 1.25rem;
+    }
 }
 
 .projects-cat {
@@ -497,7 +602,7 @@ nav ul li.active a i {
 }
 
 .projects-cat li:not(:first-of-type) {
-    margin-left: 8px
+    margin-left: 5px
 }
 
 .projects-cat li button {
@@ -507,7 +612,7 @@ nav ul li.active a i {
     color: #fff;
     transition: all .3s ease-in-out;
     letter-spacing: .5px;
-    font-size: .75rem;
+    font-size: .54rem;
     cursor: pointer;
     border-radius: 5px;
     background: #00A2C2;
@@ -515,7 +620,15 @@ nav ul li.active a i {
     outline: none;
 }
 
-.projects-cat li button:hover,
+@media(min-width: 470px){
+    .projects-cat li button{
+        font-size: .9rem;
+    }
+    .projects-cat li button:hover{
+        background: linear-gradient(to right, #86b8e7, #91EAE4);
+    }
+}
+
 .projects-cat li button.active {
     background: linear-gradient(to right, #86b8e7, #91EAE4);
 }
@@ -536,7 +649,7 @@ nav ul li.active a i {
 .project {
     width: 180px;
     height: 200px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     position: relative;
     overflow: hidden;
     box-shadow: 6px 6px 10px rgba(46, 54, 68, 0.3);
@@ -582,7 +695,7 @@ nav ul li.active a i {
     -o-object-fit: cover;
     object-fit: cover;
     -o-object-position: -10px -10px;
-    object-position: -10px -15px;
+    object-position: -20px -20px;
     transition: all .3s ease-in-out;
     -webkit-filter: grayscale(0);
     filter: grayscale(0);
@@ -614,7 +727,6 @@ nav ul li.active a i {
 
 .details h6 {
     margin: 0;
-    opacity: .8;
 }
 
 
